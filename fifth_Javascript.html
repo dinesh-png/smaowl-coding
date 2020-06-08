@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+body
+{
+margin-top:150px;
+margin-left:450px;
+margin-bottom:150px;
+background:-webkit-gradient(linear,left top,left bottom,from(black),to(yellow));
+}
+#a
+{
+height:100px;
+width:100px;
+border-radius:50%;
+border:2px solid red;
+font-size:30px;
+font-family:broadway;
+background-color:red;
+opacity:0.8;
+}
+#a:hover,#b:hover,#c:hover
+{
+opacity:1;
+cursor:pointer;
+border:2px solid black;
+}
+#b
+{
+height:100px;
+width:100px;
+border-radius:50%;
+border:2px solid blue;
+font-size:30px;
+font-family:calisto mt;
+background-color:blue;
+font-weight:bold;
+color:yellow;
+opacity:0.8;
+}
+#c
+{
+height:100px;
+width:100px;
+border-radius:50%;
+border:2px solid black;
+font-size:30px;
+font-family:broadway;
+background-color:black;
+font-weight:bold;
+color:red;
+opacity:0.8;
+}
+#d
+{
+height:60px;
+width:440px;
+border-radius:4%;
+border:2px solid black;
+background-color:gray;
+cursor:pointer;
+color:yellow;
+}
+</style>
+</head>
+<script>
+function insert(num)
+{
+document.myform.bb.value = document.myform.bb.value+num;
+}
+function cleartext()
+{
+document.myform.bb.value = "";
+}
+function equal()
+{
+var exp = document.myform.bb.value;
+document.myform.bb.value = eval(exp);
+}
+</script>
+<body>
+<form name="myform">
+<input name="bb" id="d">
+</form>
+<table>
+         <tr>
+               <td>
+				     <input id="a" type="button" onclick="insert(7)" value="7">
+			   </td>
+			   <td>
+				     <input id="a" type="button" onclick="insert(8)" value="8">
+			   </td>
+			   <td>
+				     <input id="a" type="button" onclick="insert(9)" value="9">
+			   </td>
+			   <td>
+				     <input id="b" type="button" onclick="insert('*')" value="x">
+			   </td>
+	     </tr>
+		 <tr>
+		       <td>
+				     <input id="a" type="button" onclick="insert(4)" value="4">
+			   </td>
+			   <td>
+				     <input id="a" type="button" onclick="insert(5)" value="5">
+			   </td>
+			   <td>
+				     <input id="a" type="button" onclick="insert(6)" value="6">
+			   </td>
+			   <td>
+				     <input id="b" type="button" onclick="insert('-')" value="-">
+			   </td>
+		 </tr>
+		 <tr>
+		       <td>
+				     <input id="a" type="button" onclick="insert(1)" value="1">
+               </td>
+			   <td>
+				     <input id="a" type="button" onclick="insert(2)" value="2">
+			   </td>
+			   <td>
+				     <input id="a" type="button" onclick="insert(3)" value="3">
+			   </td>
+			   <td>
+				     <input id="b" type="button" onclick="insert('+')" value="+">
+			   </td>
+		 </tr>
+		 <tr>
+		       <td>
+				     <input id="c" type="button" onclick="cleartext()" value="C">
+			   </td>
+			   <td>
+				     <input id="a" type="button" onclick="insert(0)" value="0">
+			   </td>
+			   <td>
+				     <input id="c" type="button" onclick="equal()" value="=">
+			   </td>
+			   <td>
+				     <input id="b" type="button" onclick="insert('/')" value="/">
+			   </td>
+		 </tr>
+</table>
+</body>
+</html>
